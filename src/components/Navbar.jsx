@@ -22,16 +22,16 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-1 w-100 p-10 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-1 w-max md:w-100 p-10 shadow"
           >
             <li>
-              <a>Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a>Projects</a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
-              <a>Analytics/Results</a>
+              <a href="#results">Analytics/Results</a>
             </li>
             <li>
               <a>Testimonials</a>
@@ -41,25 +41,25 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <h1 className="text-4xl her-style font-black text-white">
+        <h1 className="max-[350px]:text-3xl text-4xl her-style font-black text-white">
           the<span className="text-base-content">CBA</span>
         </h1>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="text-base menu menu-horizontal px-1 ">
           <li>
-            <a>Home</a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a>Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a>Analytics/Results</a>
+            <a href="#results">Analytics/Results</a>
           </li>
           <li>
             <details>
               <summary>More</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
+              <ul className="p-2 bg-base-100 w-60 z-1">
                 <li>
                   <a>Testimonials</a>
                 </li>
