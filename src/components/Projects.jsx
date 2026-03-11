@@ -15,17 +15,17 @@ const Projects = () => {
     },
     {
       src: P5,
+      alt: "Project 5",
+      title:
+        "High-performing social media copy that drove over 2,000+ organic engagements (surpassing industry benchmarks for community interaction).",
+      link: "https://docs.google.com/document/d/1945xHuEQZE1jd7GKmLseorfLJpOxGeqGrY5vrA8bkSQ/edit",
+    },
+    {
+      src: P2,
       alt: "Project 2",
       title:
         "Editorial-style Fashion Blog Post with a focus on high-impact storytelling.",
       link: "https://docs.google.com/document/d/1PnK8IbgicyHdsYeDvBhpoPc-c4rTUxoUWLLFgGZ0SOQ/edit",
-    },
-    {
-      src: P2,
-      alt: "Project 3",
-      title:
-        "Conversion-focused landing page copy for an AI branding course that generated 1,400+ student enrollments.",
-      link: "https://docs.google.com/document/d/1-mO234_i49s9V94eAxNWoZ-g00M6N29PokCZ4HuLOMA/edit",
     },
     {
       src: P4,
@@ -36,10 +36,10 @@ const Projects = () => {
     },
     {
       src: P3,
-      alt: "Project 5",
+      alt: "Project 3",
       title:
-        "High-performing social media copy that drove over 2,000+ organic engagements (surpassing industry benchmarks for community interaction).",
-      link: "https://docs.google.com/document/d/1945xHuEQZE1jd7GKmLseorfLJpOxGeqGrY5vrA8bkSQ/edit",
+        "Conversion-focused landing page copy for an AI branding course that generated 1,400+ student enrollments.",
+      link: "https://docs.google.com/document/d/1-mO234_i49s9V94eAxNWoZ-g00M6N29PokCZ4HuLOMA/edit",
     },
   ];
 
