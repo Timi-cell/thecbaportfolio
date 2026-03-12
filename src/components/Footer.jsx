@@ -8,7 +8,7 @@ const Footer = () => {
             <span className="text-white">the</span>CBA
           </span>{" "}
           <i>{new Date().getFullYear()}</i>
-          <br /> Built & Developed by{" "}
+          <br />Developed by{" "}
           <a
             href="https://www.linkedin.com/in/samuelaluko/"
             className="underline text-white italic"

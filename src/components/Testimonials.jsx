@@ -40,7 +40,7 @@ const Testimonials = () => {
       const container = carouselRef.current;
       const itemWidth = container.offsetWidth;
 
-      // 2. Scroll the container manually instead of using scrollIntoView
+      // Scroll the container manually instead of using scrollIntoView
       container.scrollTo({
         left: idx * itemWidth,
         behavior: "smooth",
@@ -52,7 +52,7 @@ const Testimonials = () => {
     const timer = setInterval(() => {
       const nextIndex = (currentIndex + 1) % testimonials.length;
       scrollToSlide(nextIndex);
-    }, 1000);
+    }, 10000);
 
     return () => clearInterval(timer);
   }, [currentIndex, testimonials.length]);
