@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import P1 from "../assets/p1.png";
 import P2 from "../assets/p2.png";
 import P3 from "../assets/p3.png";
@@ -50,9 +51,14 @@ const Projects = () => {
       </h2>
       <div className="flex w-full flex-col lg:flex-row mt-10 flex-wrap gap-5">
         {projects.map((p, idx) => (
-          <div
+          <motion.div
             key={idx}
             className="card bg-base-300 rounded-box h-80 overflow-hidden grow relative"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            exit={{ y: 50, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
           >
             <img
               src={p.src}
@@ -67,7 +73,7 @@ const Projects = () => {
                 <button className="btn mt-2 px-4 py-2">Check it out</button>
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

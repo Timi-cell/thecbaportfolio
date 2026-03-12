@@ -2,6 +2,7 @@ import { SocialIcon } from "react-social-icons/component";
 import "react-social-icons/linkedin";
 import "react-social-icons/mailto";
 import { FaPhoneAlt } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const Navbar = () => (
   <div className="navbar bg-base-100 shadow-sm fixed z-999 px-2 md:px-10">
@@ -45,9 +46,16 @@ const Navbar = () => (
           </li>
         </ul>
       </div>
-      <h1 className="max-[350px]:text-3xl text-4xl her-style font-black text-white">
-        the<span className="text-base-content">CBA</span>
-      </h1>
+      <motion.h1
+        className="max-[350px]:text-3xl text-4xl her-style font-black text-white"
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+      >
+        <a href="#">
+          the<span className="text-base-content">CBA</span>
+        </a>
+      </motion.h1>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="text-base menu menu-horizontal px-1 gap-4">
@@ -75,32 +83,76 @@ const Navbar = () => (
         </li>
       </ul>
     </div>
-    <div className="navbar-end flex items-center gap-2.5">
+    <motion.div
+      className="navbar-end flex items-center gap-2.5"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.3,
+          },
+        },
+      }}
+    >
       {/* LinkedIn Icon */}
-      <SocialIcon
-        url="https://www.linkedin.com/in/chinwendu-socialmediastrategist"
-        target="_blank"
-        style={{ height: 40, width: 40 }} // Adjust size as needed
-      />
+      <motion.div
+        variants={{
+          hidden: { y: -30, opacity: 0 },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.6, ease: "easeOut" },
+          },
+        }}
+      >
+        <SocialIcon
+          url="https://www.linkedin.com/in/chinwendu-socialmediastrategist"
+          target="_blank"
+          style={{ height: 40, width: 40 }} // Adjust size as needed
+        />
+      </motion.div>
 
       {/* Gmail-style Email Icon */}
-      <SocialIcon
-        network="mailto"
-        url="mailto:ayodelechinwedu@gmail.com"
-        bgColor="#EA4335"
-        fgColor="#ffffff"
-        style={{ height: 40, width: 40 }}
-      />
+      <motion.div
+        variants={{
+          hidden: { y: -30, opacity: 0 },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.6, ease: "easeOut" },
+          },
+        }}
+      >
+        <SocialIcon
+          network="mailto"
+          url="mailto:ayodelechinwedu@gmail.com"
+          bgColor="#EA4335"
+          fgColor="#ffffff"
+          style={{ height: 40, width: 40 }}
+        />
+      </motion.div>
 
       {/* Phone Icon with Gray Background and Green Icon */}
-      <a
+      <motion.a
         href="tel:+2348155104981"
         className="flex items-center justify-center bg-white rounded-full"
         style={{ height: 40, width: 40 }} // Matches SocialIcon size exactly
+        variants={{
+          hidden: { y: -30, opacity: 0 },
+          visible: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.6, ease: "easeOut" },
+          },
+        }}
       >
         <FaPhoneAlt className="text-green-500" size={18} />
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   </div>
 );
 

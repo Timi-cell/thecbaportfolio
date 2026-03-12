@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import R1 from "../assets/r1.png";
 import R2 from "../assets/r2.png";
 import R3 from "../assets/r3.jpg";
@@ -39,7 +40,15 @@ const Results = () => {
 
       <div className="flex w-full flex-col lg:flex-row mt-10 flex-wrap gap-10">
         {results.map((p, idx) => (
-          <div key={idx} className="flex flex-col grow lg:w-[45%]">
+          <motion.div
+            key={idx}
+            className="flex flex-col grow lg:w-[45%]"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
             {/* Image Container: Removed fixed h-80 to allow text to fit below */}
             <div className="card bg-base-300 rounded-box h-80 overflow-hidden border-2 border-base-content shadow-[0_0_20px_rgba(220,165,78,0.3)] scale-[1.02]">
               <img src={p.src} alt={p.alt} className="w-full h-full" />
@@ -51,7 +60,7 @@ const Results = () => {
             >
               {p.title}
             </h3>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
