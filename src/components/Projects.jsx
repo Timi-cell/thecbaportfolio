@@ -49,7 +49,7 @@ const Projects = () => {
       <h2 className="her-style font-extrabold text-3xl wrap-break-word">
         PROJECTS
       </h2>
-      <div className="flex w-full flex-col lg:flex-row mt-10 flex-wrap gap-5">
+      <div className="flex w-full flex-col! lg:flex-row! mt-10 flex-wrap gap-5">
         {projects.map((p, idx) => (
           <motion.div
             key={idx}

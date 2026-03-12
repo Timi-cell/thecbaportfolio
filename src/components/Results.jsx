@@ -38,7 +38,7 @@ const Results = () => {
         ANALYTICS/RESULTS
       </h2>
 
-      <div className="flex w-full flex-col lg:flex-row mt-10 flex-wrap gap-10">
+      <div className="flex w-full flex-col! lg:flex-row! mt-10 flex-wrap gap-10">
         {results.map((p, idx) => (
           <motion.div
             key={idx}
