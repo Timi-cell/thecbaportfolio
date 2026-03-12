@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10 ">
       {/* 1. Added 'text-center md:text-left' to the container below */}
-      <div className="hero-content items-center flex-col lg:flex-row-reverse text-left">
+      <div className="hero-content flex flex-col lg:flex-row-reverse items-center text-left">
         <motion.div
           className="avatar"
           initial={{ y: -50, opacity: 0 }}
