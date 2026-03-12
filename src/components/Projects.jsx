@@ -45,7 +45,9 @@ const Projects = () => {
 
   return (
     <div className="pt-20 px-6.5 md:px-10 pb-10" id="projects">
-      <h2 className="her-style font-extrabold text-3xl">PROJECTS</h2>
+      <h2 className="her-style font-extrabold text-3xl wrap-break-word">
+        PROJECTS
+      </h2>
       <div className="flex w-full flex-col lg:flex-row mt-10 flex-wrap gap-5">
         {projects.map((p, idx) => (
           <div
