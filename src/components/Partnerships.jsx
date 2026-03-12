@@ -1,13 +1,13 @@
-import EP1 from "../assets/EP1.jpg";
-import EP2 from "../assets/EP2.jpg";
-import EP3 from "../assets/EP3.jpg";
-import EP4 from "../assets/EP4.jpg";
-import EP5 from "../assets/EP5.jpg";
-import EP6 from "../assets/EP6.jpg";
-import EP7 from "../assets/EP7.jpg";
-import EP8 from "../assets/EP8.jpg";
-import EP9 from "../assets/EP9.jpg";
-import EP10 from "../assets/EP10.jpg";
+import EP1 from "../assets/ep1.jpg";
+import EP2 from "../assets/ep2.jpg";
+import EP3 from "../assets/ep3.jpg";
+import EP4 from "../assets/ep4.jpg";
+import EP5 from "../assets/ep5.jpg";
+import EP6 from "../assets/ep6.jpg";
+import EP7 from "../assets/ep7.jpg";
+import EP8 from "../assets/ep8.jpg";
+import EP9 from "../assets/ep9.jpg";
+import EP10 from "../assets/ep10.jpg";
 
 const Partnerships = () => {
   const partnershipsandevents = [
