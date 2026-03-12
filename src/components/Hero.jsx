@@ -26,18 +26,20 @@ const Hero = () => {
     <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10">
       {/* 1. Added 'text-center md:text-left' to the container below */}
       <div className="hero-content flex flex-col lg:flex-row-reverse items-center text-left">
-        <motion.div
-        layout="position"
-          className="avatar"
-          initial={{ y: -50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <div className="ring-primary ring-offset-base-content w-full md:w-96 rounded-full ring-2 ring-offset-2">
-            <img src={imageUrl} alt="HER" />
-          </div>
-        </motion.div>
+        <div className="shrink-0">
+          <motion.div
+            // layout="position"
+            className="avatar"
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <div className="ring-primary ring-offset-base-content w-full md:w-96 rounded-full ring-2 ring-offset-2">
+              <img src={imageUrl} alt="HER" />
+            </div>
+          </motion.div>
+        </div>
         {/* 2. Added 'flex flex-col items-center md:items-start' to center the button/text group */}
         <div className="flex flex-col items-center md:items-start lg:mt-0 md:mt-10 mt-10">
           <h1 className="text-5xl font-bold text-white her-style leading-15">
