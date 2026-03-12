@@ -42,6 +42,7 @@ const Results = () => {
         {results.map((p, idx) => (
           <motion.div
             key={idx}
+            layout="position"
             className="flex flex-col grow lg:w-[45%]"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}

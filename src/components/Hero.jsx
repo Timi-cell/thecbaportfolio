@@ -23,10 +23,11 @@ const Hero = () => {
     : HER;
 
   return (
-    <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10 ">
+    <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10">
       {/* 1. Added 'text-center md:text-left' to the container below */}
       <div className="hero-content flex flex-col lg:flex-row-reverse items-center text-left">
         <motion.div
+        layout="position"
           className="avatar"
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
