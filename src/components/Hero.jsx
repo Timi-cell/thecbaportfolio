@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.div>
 
         {/* 2. Added 'flex flex-col items-center md:items-start' to center the button/text group */}
-        <div className="flex flex-col items-center md:items-start lg:mt-0 md:mt-10 mt-10">
+        <div className="flex flex-col items-center! md:items-start! lg:mt-0 md:mt-10 mt-10">
           <h1 className="text-5xl font-bold text-white her-style leading-15">
             <span>
               I Don’t Just{" "}

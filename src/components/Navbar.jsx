@@ -36,7 +36,7 @@ const Navbar = () => (
             <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#results">Analytics/Results</a>
+            <a href="#results">Results</a>
           </li>
           <li>
             <a href="#testimonials">Testimonials</a>
@@ -66,7 +66,7 @@ const Navbar = () => (
           <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="#results">Analytics/Results</a>
+          <a href="#results">Results</a>
         </li>
         <li>
           <details>

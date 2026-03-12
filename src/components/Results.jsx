@@ -35,7 +35,7 @@ const Results = () => {
   return (
     <div className="bg-base-200 px-6.5 md:px-10 pt-20 pb-10" id="results">
       <h2 className="her-style font-extrabold text-3xl wrap-break-word">
-        ANALYTICS/RESULTS
+        RESULTS
       </h2>
 
       <div className="flex w-full flex-col! lg:flex-row! mt-10 flex-wrap gap-10">
