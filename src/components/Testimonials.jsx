@@ -2,10 +2,11 @@ import Aluko from "../assets/aluko.jpg";
 import Adeosun from "../assets/adeosun.jpg";
 import Mmesoma from "../assets/mmesoma.jpg";
 import Eze from "../assets/eze.jpg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef(null);
   const testimonials = [
     {
       name: "Mmesoma Evidence Chidozie",
@@ -35,12 +36,14 @@ const Testimonials = () => {
 
   const scrollToSlide = (idx) => {
     setCurrentIndex(idx);
-    const element = document.getElementById(`slide${idx + 1}`);
-    if (element) {
-      element.scrollIntoView({
+    if (carouselRef.current) {
+      const container = carouselRef.current;
+      const itemWidth = container.offsetWidth;
+
+      // 2. Scroll the container manually instead of using scrollIntoView
+      container.scrollTo({
+        left: idx * itemWidth,
         behavior: "smooth",
-        block: "nearest", // Key: prevents the page from jumping vertically
-        inline: "start",
       });
     }
   };
@@ -49,9 +52,9 @@ const Testimonials = () => {
     const timer = setInterval(() => {
       const nextIndex = (currentIndex + 1) % testimonials.length;
       scrollToSlide(nextIndex);
-    }, 10000);
+    }, 1000);
 
-    return () => clearInterval(timer); // Cleanup on unmount
+    return () => clearInterval(timer);
   }, [currentIndex, testimonials.length]);
 
   return (
@@ -59,7 +62,7 @@ const Testimonials = () => {
       <h2 className="her-style font-extrabold text-3xl wrap-break-word">
         TESTIMONIALS
       </h2>
-      <div className="carousel w-full mt-10">
+      <div className="carousel w-full mt-10" ref={carouselRef}>
         {testimonials.map((testimonial, idx) => (
           <div
             key={idx}
