@@ -2,8 +2,10 @@ import Aluko from "../assets/aluko.jpg";
 import Adeosun from "../assets/adeosun.jpg";
 import Mmesoma from "../assets/mmesoma.jpg";
 import Eze from "../assets/eze.jpg";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const testimonials = [
     {
       name: "Mmesoma Evidence Chidozie",
@@ -32,6 +34,7 @@ const Testimonials = () => {
   ];
 
   const scrollToSlide = (idx) => {
+    setCurrentIndex(idx);
     const element = document.getElementById(`slide${idx + 1}`);
     if (element) {
       element.scrollIntoView({
@@ -41,6 +44,15 @@ const Testimonials = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % testimonials.length;
+      scrollToSlide(nextIndex);
+    }, 10000);
+
+    return () => clearInterval(timer); // Cleanup on unmount
+  }, [currentIndex, testimonials.length]);
 
   return (
     <div className="pt-20 px-6.5 md:px-10 pb-10" id="testimonials">
