@@ -60,7 +60,7 @@ const Hero = () => {
           </p>
           <a href="#results">
             <button className="btn btn-outline btn-base-content hover:bg-base-content hover:text-white her-style text-base py-5 max-[330px]:py-8">
-              Check out my Analytics/Results
+              Check out my Results
             </button>
           </a>
         </div>
