@@ -8,7 +8,11 @@ const Navbar = () => (
   <div className="navbar bg-base-100 shadow-sm fixed z-999 px-2 md:px-10">
     <div className="navbar-start">
       <div className="dropdown text-base">
-        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-base-content lg:hidden"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -47,7 +51,7 @@ const Navbar = () => (
         </ul>
       </div>
       <motion.h1
-        className="max-[350px]:text-3xl text-4xl her-style font-black text-white"
+        className="max-[350px]:text-3xl text-4xl her-style font-black text-white lg:ml-0 ml-3"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
