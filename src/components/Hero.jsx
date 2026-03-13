@@ -34,13 +34,17 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <div className="ring-primary ring-offset-base-content w-full md:w-96 rounded-full ring-2 ring-offset-2">
-            <img src={imageUrl} alt="HER" />
+          <div className="ring-primary ring-offset-base-content w-full! md:w-96! aspect-square rounded-full ring-2 ring-offset-2 overflow-hidden">
+            <img
+              src={imageUrl}
+              alt="HER"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
         {/* 2. Added 'flex flex-col items-center md:items-start' to center the button/text group */}
-        <div className="flex flex-col items-center! md:items-start! lg:mt-0 md:mt-10 mt-10">
+        <div className="flex flex-col items-start! lg:mt-0 md:mt-10 mt-10">
           <h1 className="text-5xl font-bold text-white her-style leading-15">
             <span>
               I Don’t Just{" "}

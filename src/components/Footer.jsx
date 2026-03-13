@@ -7,8 +7,10 @@ const Footer = () => {
           <span className="her-style">
             <span className="text-white">the</span>CBA
           </span>{" "}
-          <i>{new Date().getFullYear()}</i>
-          <br />Developed by{" "}
+          <span>{new Date().getFullYear()}</span>
+        </p>
+        <p>
+          Developed by{" "}
           <a
             href="https://www.linkedin.com/in/samuelaluko/"
             className="underline text-white italic"

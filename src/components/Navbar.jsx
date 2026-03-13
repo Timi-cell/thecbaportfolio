@@ -112,7 +112,10 @@ const Navbar = () => (
         <SocialIcon
           url="https://www.linkedin.com/in/chinwendu-socialmediastrategist"
           target="_blank"
-          style={{ height: 40, width: 40 }} // Adjust size as needed
+          style={{
+            height: "clamp(32px, 6vw, 45px)",
+            width: "clamp(32px, 6vw, 45px)",
+          }}
         />
       </motion.div>
 
@@ -132,7 +135,10 @@ const Navbar = () => (
           url="mailto:ayodelechinwedu@gmail.com"
           bgColor="#EA4335"
           fgColor="#ffffff"
-          style={{ height: 40, width: 40 }}
+          style={{
+            height: "clamp(32px, 6vw, 45px)",
+            width: "clamp(32px, 6vw, 45px)",
+          }}
         />
       </motion.div>
 
@@ -140,7 +146,10 @@ const Navbar = () => (
       <motion.a
         href="tel:+2348155104981"
         className="flex items-center justify-center bg-white rounded-full"
-        style={{ height: 40, width: 40 }} // Matches SocialIcon size exactly
+        style={{
+          height: "clamp(32px, 6vw, 45px)",
+          width: "clamp(32px, 6vw, 45px)",
+        }}
         variants={{
           hidden: { y: -30, opacity: 0 },
           visible: {
@@ -150,7 +159,7 @@ const Navbar = () => (
           },
         }}
       >
-        <FaPhoneAlt className="text-green-500" size={18} />
+        <FaPhoneAlt className="text-green-500 w-4 md:w-5 h-auto" />
       </motion.a>
     </motion.div>
   </div>

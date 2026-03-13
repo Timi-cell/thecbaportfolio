@@ -67,7 +67,7 @@ const Testimonials = () => {
           <div
             key={idx}
             id={`slide${idx + 1}`}
-            className="carousel-item relative w-full max-[335px]:h-145 h-125 sm:h-95"
+           className="carousel-item relative w-full h-auto min-h-100 sm:h-95"
           >
             <div className="card bg-[#A56E06] text-neutral-content w-full">
               <div className="card-body items-center text-center">
