@@ -1,26 +1,11 @@
-import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import HER from "../assets/her.jpeg";
 
 const Hero = () => {
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-
-  useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
-
-    return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-    };
-  }, []);
-
-  const imageUrl = isOnline
-    ? "https://res.cloudinary.com/dzqaqbrng/image/upload/v1773280122/her_vulygd.jpg"
-    : HER;
+  // const imageUrl =
+  //   "https://res.cloudinary.com/dzqaqbrng/image/upload/v1773280122/her_vulygd.jpg";
+  const imageUrl =
+    "https://res.cloudinary.com/dzqaqbrng/image/upload/f_auto,q_auto/v1773280122/her_vulygd.jpg";
 
   return (
     <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10">
@@ -37,6 +22,10 @@ const Hero = () => {
           <div className="ring-primary ring-offset-base-content w-full! md:w-96! aspect-square rounded-full ring-2 ring-offset-2 overflow-hidden">
             <img
               src={imageUrl}
+              loading="eager"
+              onError={(e) => {
+                e.target.src = HER;
+              }} // Automatically switch to local if Cloudinary fails
               alt="HER"
               className="w-full h-full object-cover"
             />
