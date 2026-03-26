@@ -1,36 +1,40 @@
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 import HER from "../assets/her.jpeg";
+import { FaArrowDown } from "react-icons/fa";
 
 const Hero = () => {
   // const imageUrl =
   //   "https://res.cloudinary.com/dzqaqbrng/image/upload/v1773280122/her_vulygd.jpg";
-  const imageUrl =
-    "https://res.cloudinary.com/dzqaqbrng/image/upload/f_auto,q_auto/v1773280122/her_vulygd.jpg";
+
+  // const imageUrlSetDetails =
+  //   "https://res.cloudinary.com/dzqaqbrng/image/upload/f_auto,q_auto/v1773280122/her_vulygd.jpg";
 
   return (
     <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10">
       {/* 1. Added 'text-center md:text-left' to the container below */}
       <div className="hero-content flex flex-col! lg:flex-row-reverse! items-center text-left">
-        <motion.div
+        {/* <motion.div
           // layout="position"
           className="avatar"
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: false, amount: 0.3 }}
-        >
-          <div className="ring-primary ring-offset-base-content w-full! md:w-96! aspect-square rounded-full ring-2 ring-offset-2 overflow-hidden">
+        > */}
+        <div className="avatar">
+          <div className="ring-primary ring-offset-base-content w-full md:w-96 aspect-square rounded-full ring-2 ring-offset-2 overflow-hidden">
             <img
-              src={imageUrl}
+              src={HER}
               loading="eager"
-              onError={(e) => {
-                e.target.src = HER;
-              }} // Automatically switch to local if Cloudinary fails
-              alt="HER"
+              // onError={(e) => {
+              //   e.target.src = HER;
+              // }} // Automatically switch to local if Cloudinary fails
+              alt="An image of Chinwendu Bolaji Ayodele"
               className="w-full h-full object-cover"
             />
           </div>
-        </motion.div>
+        </div>
+        {/* </motion.div> */}
 
         {/* 2. Added 'flex flex-col items-center md:items-start' to center the button/text group */}
         <div className="flex flex-col items-start! lg:mt-0 md:mt-10 mt-10">
@@ -42,7 +46,7 @@ const Hero = () => {
             <br className="hidden min-[330px]:block" />{" "}
             <span className="text-base-content">I</span> Scale Brands.
           </h1>
-          <p className="py-6 text-[#dcdcdc] lg:w-4/5 w-full text-base">
+          <p className="py-6 text-[#dcdcdc] lg:w-4/5 w-full text-base leading-6.5">
             In a world of 3-second attention spans, "good enough" is invisible.{" "}
             <br className="md:block hidden" />
             I’m Chinwendu, a Digital Marketer who lives at the intersection of
@@ -52,8 +56,8 @@ const Hero = () => {
             <br /> My mission is simple: Make your brand impossible to ignore.
           </p>
           <a href="#results">
-            <button className="btn btn-outline btn-base-content hover:bg-base-content hover:text-white her-style text-base py-5 max-[330px]:py-8">
-              Check out my Results
+            <button className="btn btn-outline btn-base-content hover:bg-base-content hover:text-white text-base py-5 max-[330px]:py-8">
+              Check out my Results <FaArrowDown />
             </button>
           </a>
         </div>
