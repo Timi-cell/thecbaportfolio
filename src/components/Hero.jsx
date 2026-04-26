@@ -11,14 +11,14 @@ const Hero = () => {
   return (
     <div className="hero bg-base-200 min-h-screen lg:pt-10 md:pt-20 pt-30 px-6.5 md:px-10">
       {/* 1. Added 'text-center md:text-left' to the container below */}
-      <div className="hero-content flex flex-col! lg:flex-row-reverse! items-center text-left">
+      <div className="hero-content flex flex-col lg:flex-row-reverse items-center text-left">
         {" "}
         <img
           src={HER}
           initial="hidden"
           whileInView="show"
           alt="A picture of the digital marketer, Chinwendu Bolaji Ayodele"
-          className="w-96 h-96 aspect-square object-cover rounded-[50%] border-amber-400 border-2"
+          className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-lg md:rounded-[50%] aspect-square border-amber-400 border-2"
         />
         {/* <motion.div
           // layout="position"
@@ -43,7 +43,7 @@ const Hero = () => {
         </div> */}
         {/* </motion.div> */}
         {/* 2. Added 'flex flex-col items-center md:items-start' to center the button/text group */}
-        <div className="flex flex-col items-start! lg:mt-0 md:mt-10 mt-10">
+        <div className="flex flex-col items-start mt-10">
           <h1 className="text-5xl font-bold text-white her-style leading-15">
             <span>
               I Don’t Just{" "}
